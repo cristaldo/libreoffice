@@ -1,5 +1,5 @@
-libreoffice
-===========
+Libreoffice Puppet Module
+=========================
 
 Puppet Module to install libreoffice on Ubuntu OS
 
@@ -24,9 +24,9 @@ as well the selected language on the libreoffice::params class.
 If you didn't chose the language on the params.pp manifest, it will install the en-us
 language by default, unless the timezone is BRST, (GTM) the language will be pt-br.
 
-### homologated distributions
+### Homologated distributions
 
-This module has been tested with the following releases of Ubuntu.
+This module has been tested with the following releases of Ubuntu...
 
 ```
 Release             Version          Repository         Observations
@@ -40,7 +40,7 @@ Lubuntu 13.10 saucy    => 4.2.0         ppa repository
 Xubuntu 13.04 raring   => 4.1.4         ppa repository
 Xubuntu 13.10 saucy    => 4.2.0         ppa repository
 
-and any distributions based on these releases.
+...and any distributions based on these releases.
 ```
 
 The default repository source is (http://ppa.launchpad.net/) but unfortunately not all 
