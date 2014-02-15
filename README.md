@@ -1,13 +1,13 @@
 libreoffice
 ===========
 
-Puppet Module to install libreoffice on Ubuntu Linux OS
+Puppet Module to install libreoffice on Ubuntu OS
 
 Puppet module for installing
 [LibreOffice](https://github.com/cristaldo/libreoffice) 
 
-This module is also available on the [Puppet
-Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
+This module is also available on the
+[Puppet Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
 
 ## Usage
 
