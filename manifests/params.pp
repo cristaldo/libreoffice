@@ -18,7 +18,7 @@
 # fr    -- French langua
 $def_lang = "en-us"
 
-class	libreoffice::params	{
+class	libreoffice::params {
 
  case $::timezone {
 	'brst': {
@@ -47,14 +47,14 @@ $quantal_pkgs = ['libreoffice',
 		 'libreoffice-gnome',
 		 'libreoffice-ogltrans',
 		 'libreoffice-pdfimport',
-		 "libreoffice-help-${loc_lang}",
-		 "libreoffice-l10n-${loc_lang}"]
+		 "libreoffice-help-${lib_lang}",
+		 "libreoffice-l10n-${lib_lang}"]
 
 $lib_pkgs = ['libreoffice',
 	     'libreoffice-ogltrans',
 	     'libreoffice-pdfimport',
-	     "libreoffice-help-${loc_lang}",
-	     "libreoffice-l10n-${loc_lang}"]
+	     "libreoffice-help-${lib_lang}",
+	     "libreoffice-l10n-${lib_lang}"]
 
 case $::lsbdistcodename {
 	'quantal': {

@@ -28,4 +28,3 @@ inherits libreoffice {
 	default: { notice "Operating System not supported ${::operatingsystem}"}
 	}
 }
-
