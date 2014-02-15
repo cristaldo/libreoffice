@@ -13,7 +13,6 @@ Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
 
 The module includes a single class:
 
-``` 
   node agent.puppet {
 	include libreoffice
 }
@@ -65,4 +64,3 @@ the repositories of the distributions are updated.
  Puppet Module cristaldo/libreoffice Copyright (C) 2014  Rafael Cristaldo
  This program comes with ABSOLUTELY NO WARRANTY. This is free software, 
  and you are welcome to redistribute it under certain conditions.
-```
