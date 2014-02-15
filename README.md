@@ -13,20 +13,21 @@ Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
 
 The module includes a single class:
 
-```node agent.puppet {
+``` 
+  node agent.puppet {
 	include libreoffice
 }
-```
+
 This module installs and configures the libreoffice repository and its suite packages,
 as well the selected language on the libreoffice::params class.
 If you didn't chose the language on the params.pp manifest, it will install the en-us
 language by default, unless the timezone is BRST, (GTM) the language will be pt-br.
-```
+
 ### homologated distributions
 
 This module has been tested with the following releases of Ubuntu.
 
-```Release             Version          Repository         Observations
+Release             Version          Repository         Observations
 Ubuntu 12.04 precise   => 4.2.0         ppa repository
 Ubuntu 12.10 quantal   => 4.0.0         libreoffice-4-0  3.6.2 from ppa repository
 Ubuntu 13.04 raring    => 4.1.4         ppa repository 
@@ -38,12 +39,12 @@ Xubuntu 13.04 raring   => 4.1.4         ppa repository
 Xubuntu 13.10 saucy    => 4.2.0         ppa repository
 
 and any distributions based on these releases.
-```
-The default repository source is (http://ppa.launchpad.net/) but unfortunately not all the repositories of the distributions are updated.
+
+The default repository source is (http://ppa.launchpad.net/) but unfortunately not all 
+the repositories of the distributions are updated.
 
 ### Copyright and License 
 
-```
  Puppet Module cristaldo/libreoffice is a module to install and configure 
  LibreOffice's repositories and packages.
  Copyright (C) 2014  Rafael Cristaldo
