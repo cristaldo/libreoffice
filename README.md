@@ -13,9 +13,11 @@ Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
 
 The module includes a single class:
 
+```
   node agent.puppet {
 	include libreoffice
 }
+```
 
 This module installs and configures the libreoffice repository and its suite packages,
 as well the selected language on the libreoffice::params class.
@@ -26,6 +28,7 @@ language by default, unless the timezone is BRST, (GTM) the language will be pt-
 
 This module has been tested with the following releases of Ubuntu.
 
+```
 Release             Version          Repository         Observations
 Ubuntu 12.04 precise   => 4.2.0         ppa repository
 Ubuntu 12.10 quantal   => 4.0.0         libreoffice-4-0  3.6.2 from ppa repository
@@ -38,6 +41,7 @@ Xubuntu 13.04 raring   => 4.1.4         ppa repository
 Xubuntu 13.10 saucy    => 4.2.0         ppa repository
 
 and any distributions based on these releases.
+```
 
 The default repository source is (http://ppa.launchpad.net/) but unfortunately not all 
 the repositories of the distributions are updated.
