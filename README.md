@@ -46,6 +46,11 @@ and any distributions based on these releases.
 The default repository source is (http://ppa.launchpad.net/) but unfortunately not all 
 the repositories of the distributions are updated.
 
+### Attention!
+
+If you have installed the libreoffice's packages manually with .DEB files, you must remove 
+them before applying this module. 
+
 ### Copyright and License 
 
  Puppet Module cristaldo/libreoffice is a module to install and configure 
