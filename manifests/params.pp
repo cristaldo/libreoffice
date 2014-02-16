@@ -21,7 +21,7 @@ $def_lang = "en-us"
 class	libreoffice::params {
 
  case $::timezone {
-	'brst': {
+	'brst','brt': {
 	 $lib_lang = "pt-br" }
  	
 	 default: {
