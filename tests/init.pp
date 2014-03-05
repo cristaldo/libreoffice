@@ -5,4 +5,11 @@
 # Tests are then run by using puppet apply --noop (to check for compilation
 # errors and view a log of events) or by fully applying the test in a virtual
 # environment (to compare the resulting system state to the desired state).
+
+# To Install LibreOffice
+
 include libreoffice
+
+# To Uninstall LibreOffice
+
+include libreoffice::uninstall

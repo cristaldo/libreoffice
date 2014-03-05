@@ -1,5 +1,5 @@
 name        'cristaldo-libreoffice'
-version     '0.1.0'
+version     '0.1.5'
 source      'git://github.com/cristaldo/libreoffice.git'
 author      'Rafael Cristaldo'
 summary     'Module for installing and configure libreoffice repositories and packages on Ubuntu distributions'

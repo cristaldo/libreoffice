@@ -1,21 +1,36 @@
 Libreoffice Puppet Module
 =========================
 
-Puppet Module to install libreoffice on Ubuntu OS
+Puppet Module to install LibreOffice on Ubuntu OS
 
-Puppet module for installing
+GitHub project
 [LibreOffice](https://github.com/cristaldo/libreoffice) 
 
 This module is also available on the
 [Puppet Forge](https://forge.puppetlabs.com/cristaldo/libreoffice)
 
+## News!
+
+With this new module version is possible to install LibreOffice on Linux Mint!.
+Now we have the Option to remove the module, with the ::uninstall class!
+If for some reason you need to remove the module, just modify the include libreoffice
+to include libreoffice::uninstall
+
 ## Usage
 
-The module includes a single class:
+To install LibreOffice:
 
 ```
   node agent.puppet {
 	include libreoffice
+}
+```
+
+To UNinstall LibreOffice:
+
+```
+  node agent.puppet {
+	include libreoffice::uninstall
 }
 ```
 
@@ -39,6 +54,7 @@ Lubuntu 13.04 raring   => 4.1.4         ppa repository
 Lubuntu 13.10 saucy    => 4.2.0         ppa repository
 Xubuntu 13.04 raring   => 4.1.4         ppa repository
 Xubuntu 13.10 saucy    => 4.2.0         ppa repository
+Linux Mint 13 Maya     => 4.2.0         ppa repository   * New!
 
 ...and any distributions based on these releases.
 ```
@@ -46,9 +62,9 @@ Xubuntu 13.10 saucy    => 4.2.0         ppa repository
 The default repository source is (http://ppa.launchpad.net/) but unfortunately not all 
 the repositories of the distributions are updated.
 
-### Attention!
+### Attention!!!
 
-If you have installed the libreoffice's packages manually with .DEB files, you must remove 
+If you have installed the libreoffice's packages manually with .DEB files, you MUST remove 
 them before applying this module. 
 
 ### Copyright and License 
