@@ -1,22 +1,20 @@
-# == Class: libreoffice
+# == Class: libreoffice::params
 #
 # === Information
-# This manifest is the libreoffice repository configuration. 
-# It will provide the latest version of libreoffice - since 
-# the release's repositories are updated! 
-#								  Enjoy!
-# Copyright 2014 Rafael Cristaldo
-
-# To determine your libreoffice's language,you just need changing the
+# This manifest is to provide all the libreoffice's parameters. 
+#
+# To determine your libreoffice's language, you just need changing the
 # default parameter $def_lang =  "en-us" to your prefered language:
 # Examples: 
-# de -- German langua
-# pt -- Portuguese languag
-# en-gb -- English_briti
-# es    -- Spanish langu
-# et    -- Estonian lang
-# fr    -- French langua
+# de -- German 
+# pt -- Portuguese 
+# en-gb -- English_british
+# es    -- Spanish 
+# et    -- Estonian 
+# fr    -- French 
 $def_lang = "en-us"
+#								  Enjoy!
+# Copyright 2014 Rafael Cristaldo
 
 class	libreoffice::params {
 
@@ -33,34 +31,42 @@ class	libreoffice::params {
 $quantal_repo = "libreoffice-4-0"
 $lib_repo = "ppa"
 
- case $::lsbdistcodename {
-	'quantal': { 
-	 $repo = $quantal_repo }
- 
-	 default: { 
-	 $repo = $lib_repo }
-	 } 
+# Packages to be removed if used libreoffice::uninstall option.
+$lib_pkgs_purged = ['libreoffice',
+	'libreoffice-core',
+	'libreoffice-gnome',
+	'libreoffice-common',
+	'libreoffice-style-human',
+	'libreoffice-style-tango',
+	'uno-libs3',
+	'libreoffice-ogltrans',
+	'libreoffice-pdfimport',
+	'libreoffice-style-galaxy',
+	"libreoffice-help-${lib_lang}",
+	"libreoffice-l10n-${lib_lang}"]
 
 # Somes releases require the core and others packages, which can be placed here:
 $quantal_pkgs = ['libreoffice',
-		 'libreoffice-core',
-		 'libreoffice-gnome',
-		 'libreoffice-ogltrans',
-		 'libreoffice-pdfimport',
-		 "libreoffice-help-${lib_lang}",
-		 "libreoffice-l10n-${lib_lang}"]
+	'libreoffice-core',
+	'libreoffice-gnome',
+	'libreoffice-ogltrans',
+	'libreoffice-pdfimport',
+	"libreoffice-help-${lib_lang}",
+	"libreoffice-l10n-${lib_lang}"]
 
 $lib_pkgs = ['libreoffice',
-	     'libreoffice-ogltrans',
-	     'libreoffice-pdfimport',
-	     "libreoffice-help-${lib_lang}",
-	     "libreoffice-l10n-${lib_lang}"]
+	'libreoffice-ogltrans',
+	'libreoffice-pdfimport',
+	"libreoffice-help-${lib_lang}",
+	"libreoffice-l10n-${lib_lang}"]
 
-case $::lsbdistcodename {
-	'quantal': {
+ case $::lsbdistcodename {
+	'quantal': { 
+	 $repo = $quantal_repo 
 	 $libreoffice = $quantal_pkgs }
-
-	 default: {
+ 
+	 default: { 
+	 $repo = $lib_repo 
 	 $libreoffice = $lib_pkgs } 
-	 }
+	 } 
 }

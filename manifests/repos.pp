@@ -4,14 +4,16 @@
 # This manifest is the libreoffice repository configuration. 
 # It will provide the latest version of libreoffice - since 
 # the release's repositories are updated! 
+#
+# With this new version, it is possible to install libreoffice on Linux Mint
+# with this puppet module.
 #								  Enjoy!
 # Copyright 2014 Rafael Cristaldo
 
 class	libreoffice::repos (
-	$lib_repo = $libreoffice::params::lib_repo )
-inherits libreoffice {
+	$lib_repo = $libreoffice::params::lib_repo ) inherits libreoffice {
 
-	case $::operatingsystem {
+	case $::lsbdistid {
         'debian','ubuntu': {
 		include apt
 
@@ -24,7 +26,19 @@ inherits libreoffice {
     	include_src    	=> true
     			}
 	}
+        'LinuxMint': {
+		include apt
+
+	apt::source	{'libreoffice-mint':
+	location	=> "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
+        release         => "precise",
+    	repos          	=> "main",
+    	key            	=> "1378B444",
+    	key_server     	=> "keyserver.ubuntu.com",
+    	include_src    	=> true
+    			}
+	}
 	
-	default: { notice "Operating System not supported ${::operatingsystem}"}
+	default: { fail ("Operating System not supported $::operatingsystem") }
 	}
 }
