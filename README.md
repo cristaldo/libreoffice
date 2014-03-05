@@ -44,9 +44,9 @@ language by default, unless the timezone is BRST, (GTM) the language will be pt-
 This module has been tested with the following releases of Ubuntu...
 
 ```
-Release             Version          Repository         Observations
+Release                Version          Repository         Observations
 Ubuntu 12.04 precise   => 4.2.0         ppa repository
-Ubuntu 12.10 quantal   => 4.0.0         libreoffice-4-0  3.6.2 from ppa repository
+Ubuntu 12.10 quantal   => 4.0.0         libreoffice-4-0    3.6.2 from ppa repository
 Ubuntu 13.04 raring    => 4.1.4         ppa repository 
 Ubuntu 13.10 saucy     => 4.2.0         ppa repository
 Ubuntu 14.04 trusty    => 4.2.0         ppa repository
@@ -54,7 +54,7 @@ Lubuntu 13.04 raring   => 4.1.4         ppa repository
 Lubuntu 13.10 saucy    => 4.2.0         ppa repository
 Xubuntu 13.04 raring   => 4.1.4         ppa repository
 Xubuntu 13.10 saucy    => 4.2.0         ppa repository
-Linux Mint 13 Maya     => 4.2.0         ppa repository   * New!
+Linux Mint 13 Maya     => 4.2.0         ppa repository     * New!
 
 ...and any distributions based on these releases.
 ```
