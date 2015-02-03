@@ -25,6 +25,8 @@ class	libreoffice::params {
 	 default: {
 	 $lib_lang = $def_lang }
          } 
+# Default install parameter
+$install = 'latest'
 
 # Some releases hasn't the official repositories updated yet!
 # Because of this, we needed to change some release's repositories, unless ppa.
