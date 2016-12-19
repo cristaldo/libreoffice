@@ -21,7 +21,7 @@ class	libreoffice::repos (
 	location	=> "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
         release         => "${::lsbdistcodename}",
     	repos          	=> "main",
-    	key            	=> "1378B444",
+    	key            	=> "36E81C9267FD1383FCC4490983FBA1751378B444",
     	key_server     	=> "keyserver.ubuntu.com",
     	include_src    	=> true
     			}
@@ -33,7 +33,7 @@ class	libreoffice::repos (
 	location	=> "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
         release         => "precise",
     	repos          	=> "main",
-    	key            	=> "1378B444",
+    	key            	=> "36E81C9267FD1383FCC4490983FBA1751378B444",
     	key_server     	=> "keyserver.ubuntu.com",
     	include_src    	=> true
     			}
